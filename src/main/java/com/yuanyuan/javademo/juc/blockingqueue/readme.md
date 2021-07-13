@@ -44,6 +44,8 @@
 同ArrayBlockingQueue
 
 注意：  
-<font color="red">
 LinkedBlockingQueue默认大小为Integer.MAX_VALUE，如果使用默认值，当心内存溢出
-</font>
+
+## SynchronousQueue
+定义：
+同步队列，不存储元素，相当于单元素的阻塞队列，按照put -> take -> put -> take 顺序执行
