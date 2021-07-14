@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8" xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv=" X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>抽奖</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<br/>
+<br/>
+<br/>
+<div class="col-sm-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">抽奖者名单（<span th:text="${userCount}"></span>人）：</div>
+    <div class="panel-body" th:each="item:${users}" th:text="${item}"></div>
+  </div>
+</div>
+
+<br/>
+<div>
+  <a href="/redisproject/lottery/randomLottery" class="btn btn-default btn-lg">抽奖</a>
+</div>
+
+<br/>
+
+<div class="col-sm-4">
+  <div class="panel panel-danger">
+    <div class="panel-heading">一等奖（2名）：</div>
+    <div class="panel-body" th:each="item:${firstPrizeUsers}" th:text="${item}"></div>
+  </div>
+</div>
+
+<div class="col-sm-4">
+  <div class="panel panel-info">
+    <div class="panel-heading">二等奖（3名）：</div>
+    <div class="panel-body" th:each="item:${secondPrizeUsers}" th:text="${item}"></div>
+  </div>
+</div>
+
+<div class="col-sm-4">
+  <div class="panel panel-warning">
+    <div class="panel-heading">三等奖（5名）：</div>
+    <div class="panel-body" th:each="item:${thridPrizeUsers}" th:text="${item}"></div>
+  </div>
+</div>
+
+
+</body>
+</html>
